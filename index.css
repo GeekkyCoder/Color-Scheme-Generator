@@ -56,10 +56,19 @@ body {
 }
 
 .hex{
-  color: black;
+  color: whitesmoke;
   font-weight: bold;
-  font-size: .9rem;
+  font-size: .7rem;
   font-family: "Inter", sans-serif;
   text-align: center;
   letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  width: 50%;
+  position: absolute;
+  top: -20px;
+  border-radius: 5px;
+  padding: .2em .4em;
+  font-family: 'Kanit', sans-serif;
 }
