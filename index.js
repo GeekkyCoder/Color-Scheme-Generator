@@ -10,7 +10,7 @@ getColorBtn.addEventListener('click', () => {
 })
 
 fetchColorsData()
-// copyToClipboard()
+copyToClipboard()
 
 function fetchColorsData() {
     const colorElValue = colorEl.value.slice(1)
@@ -42,7 +42,7 @@ function randomGeneratedColor(colorArray) {
 function displayDivsWithColors(randomColorArray) {
     for (let i = 0; i < divWithColors.length; i++) {
         divWithColors[i].style.backgroundColor = randomColorArray[i]
-        hexPara[i].textContent = randomColorArray[i]
+        hexPara[i].value = randomColorArray[i]
     }
 }
 
