@@ -5,8 +5,12 @@ const colorEl = document.getElementById('colorEl')
 const selectEl = document.getElementById('selectEl')
 const hexPara = document.getElementsByClassName('hex')
 
+getColorBtn.addEventListener('click', () => {
+    fetchColorsData()
+})
 
 fetchColorsData()
+copyToClipboard()
 
 function fetchColorsData() {
     const colorElValue = colorEl.value.slice(1)
@@ -19,13 +23,9 @@ function fetchColorsData() {
             const colorArray = colorData.colors
             let ColorArrayData = randomGeneratedColor(colorArray)
             displayDivsWithColors(ColorArrayData)
+            copyToClipboard()
         })
 }
-
-getColorBtn.addEventListener('click', () => {
-    fetchColorsData()
-})
-
 
 // returns the randomly generated colors Array
 function randomGeneratedColor(colorArray) {
@@ -45,4 +45,15 @@ function displayDivsWithColors(randomColorArray) {
         hexPara[i].textContent = randomColorArray[i]
     }
 }
+
+function copyToClipboard() {
+    for (let i = 0; i < hexPara.length; i++) {
+        hexPara[i].addEventListener('click', () => {
+            hexPara[i].select()
+            hexPara[i].setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(hexPara[i].value);
+        })
+    }
+}
+
 
