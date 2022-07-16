@@ -10,7 +10,7 @@ getColorBtn.addEventListener('click', () => {
 })
 
 fetchColorsData()
-copyToClipboard()
+// copyToClipboard()
 
 function fetchColorsData() {
     const colorElValue = colorEl.value.slice(1)
