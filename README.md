@@ -1,2 +1,3 @@
 # Color-Scheme-Generator
-A Solo Project by Scrimba 
+Generate your own colors, this site uses the colors api to get data!
+Website : https://colorsapi.netlify.app/
